@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Saver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h2>My Prompts</h2>
+        <button id="show-add-view-btn" class="primary-btn">+ New</button>
+    </div>
+
+    <div id="list-view">
+        <div id="prompts-container">
+            <p class="empty-state">No prompts yet. Click "+ New" to add one.</p>
+        </div>
+    </div>
+
+    <div id="add-view" class="hidden">
+        <h3>Add New Prompt</h3>
+        
+        <div class="form-group">
+            <label>Category (Heading)</label>
+            <input type="text" id="category-input" placeholder="e.g. Coding, Email, SEO" list="category-list">
+            <datalist id="category-list">
+                </datalist>
+        </div>
+
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" id="title-input" placeholder="e.g. Debug Python Code">
+        </div>
+
+        <div class="form-group">
+            <label>Prompt Content</label>
+            <textarea id="content-input" rows="6" placeholder="Paste your prompt here..."></textarea>
+        </div>
+
+        <div class="button-group">
+            <button id="cancel-btn" class="secondary-btn">Cancel</button>
+            <button id="save-btn" class="primary-btn">Save Prompt</button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
